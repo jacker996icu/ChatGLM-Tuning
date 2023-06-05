@@ -25,8 +25,8 @@ def main():
 
     with open(args.save_path, 'w') as f:
         for example in tqdm(examples, desc="formatting.."):
-            f.write(json.dumps(format_example(example),
-                    ensure_ascii=False, indent=4) + '\n')
+            f.write(json.dumps(format_example(
+                example), ensure_ascii=False) + '\n')
 
 
 if __name__ == "__main__":
